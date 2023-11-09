@@ -1,0 +1,14 @@
+# handlers file for KongGateway
+- name: restart kong
+  service:
+    name: kong
+    state: restarted
+
+- name: reload kong
+  service:
+    name: kong
+    state: reloaded
+- name: restart postgres
+  service:
+    name: postgresql
+    state: restarted
